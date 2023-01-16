@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng hàm có sẵn</title>
+</head>
+<body>
+<div id="bai1"></div>
+<div id="result1"></div>
+<div id="bai2"></div>
+<!--<label><input type="text" id="input2"></label>-->
+<!--<button type="button" onclick="check()">Check</button>-->
+<script>
+    document.getElementById("bai1").innerHTML = "Bài 1";
+    let myColor = ["Red", "Green", "White", "Black"];
+    let x = myColor.join();
+    console.log(x);
+    document.getElementById("result1").innerHTML = x;
+    document.getElementById("bai2").innerHTML = "Bài 2";
+    let a=[7, 5, 7, 6, 8, 8,9,32,30];
+    let newa = [a[0]];
+    for ( let i=1; i<a.length; i++){
+        if(a[i-1] %2===0 && a[i]%2 === 0){
+            newa.push('-', a[i]);
+        } else {
+            newa.push(a[i]);
+        }
+    }
+    document.write(newa.join(' '));
+</script>
+</body>
+</html>
