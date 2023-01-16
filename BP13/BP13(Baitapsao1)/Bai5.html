@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm sô nguyên âm</title>
+</head>
+<body>
+<script>
+    let arr = [-10, 11, 5, 30, -2, 4, -45, 70, -3, 1];
+    let dem = 0
+    let result;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
+            dem++;
+            result = arr[i];
+        }
+    }
+    document.write("Số các số âm là: " + dem);
+</script>
+</body>
+</html>

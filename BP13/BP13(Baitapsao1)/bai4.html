@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</title>
+</head>
+<body>
+<script>
+  let array = [-3,5,1,3,2,10];
+  // let j;
+  let switchh = 0;
+  for (i = 0; i < (array.length)/2; i++) {
+    switchh = array[i];
+    array[i] = array[array.length-1-i];
+    array[array.length-1-i] = switchh;
+  }document.write(array + "<br/>");
+</script>
+</body>
+</html>

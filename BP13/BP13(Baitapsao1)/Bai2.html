@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị giá trị lớn nhất trong mảng</title>
+</head>
+<body>
+<script>
+    let arr = [10, 11, 5, 30, 2, 4, 45, 70, 3, 1];
+    let arra = [];
+    let result = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > arra){
+            arra = arr[i];
+            result = i;
+        }
+    } document.write("Số lớn nhất là: "+ arra + " nằm ở vị trí " + result);
+</script>
+</body>
+</html>

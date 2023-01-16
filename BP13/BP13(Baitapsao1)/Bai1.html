@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10</title>
+</head>
+<body>
+<script>
+  let arr = [10, 11, 5, 30, 2, 4,45, 70, 3, 1];
+  let dem = 0;
+  let result = 0
+  for(let i = 0; i<arr.length; i++){
+    if(arr[i]>=10){
+      dem ++;
+      result = arr[i];
+        console.log(result)
+        document.write(result + "<br>");
+    }
+  } document.write("Vậy có " + dem+ " lớn hơn 10" );
+</script>
+</body>
+</html>
