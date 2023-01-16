@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điền</title>
+</head>
+<body>
+<label><input type="text" id="nhap"></label>
+<button type="button" onclick="dich()">Dịch</button>
+<div id = "result"></div>
+<script>
+  function dich(){
+  let anh = ["hello", "bye", "love", "punch"];
+  let viet = ["xin chào", "tạm biệt", "yêu", "đấm"];
+  let nhap = document.getElementById("nhap").value;
+  let xet = 0;
+  let result = "";
+  let i, j;
+  for(i= 0; i<anh.length; i ++){
+    if(nhap === anh[i]){
+      xet = i;
+    }
+    for(j = 0; j<viet.length; j++){
+      if(xet === j){
+        result = viet[j];
+      }
+    }
+  } document.write(result);
+  }
+</script>
+</body>
+</html>
