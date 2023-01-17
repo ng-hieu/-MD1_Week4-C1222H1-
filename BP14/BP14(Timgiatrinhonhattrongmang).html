@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị nhỏ nhất trong mảng</title>
+</head>
+<body>
+<script>
+    let arr1 = [3, 5, 1, 8, -3, 7, 8];
+    check(arr1);
+    let arr2 = [7, 12, 6, 9, 20, 56, 89];
+    check(arr2);
+    let arr3 = [];
+    check(arr3);
+    let arr4 = [0, 0, 0, 0, 0, 0];
+    check(arr4);
+
+    function check(x) {
+        let min = x[0];
+        if (x.length === 0) {
+            document.write("Đây là hàm rỗng" + "<br>")}
+        else {
+            for (let i = 0; i < x.length; i++) {
+                if (x[i] < min) {
+                    min = x[i];
+                }
+            }
+            document.write(min + " là số nhỏ nhất" + "<br>");
+        }
+    }
+</script>
+</body>
+</html>
