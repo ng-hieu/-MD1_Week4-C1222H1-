@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label><input type="number" id = "feet" oninput="feet(this.value)"></label>
+<div id="result1"></div>
+<br>
+<label><input type="number" id = "metter" oninput="metter(this.value)"></label>
+<div id="result2"></div>
+<script>
+    let f = parseFloat(document.getElementById("feet").value);
+    feet(f);
+    let me = parseFloat(document.getElementById("metter").value);
+    metter(me);
+    function feet(x){
+        let m = 0.305 * x;
+        document.getElementById("result1").innerHTML = "Sau khi chuyển đổi ta được: " + m +" metter";
+    }
+    function metter(x){
+        let f = 3.279 * x;
+        document.getElementById("result2").innerHTML = "Sau khi chuyển đổi ta được: " + f +" metter";
+    }
+</script>
+</body>
+</html>
