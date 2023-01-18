@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label><input type="text" id="sodau"></label>
+<label><input type="text" id="sothuhai"></label>
+<button type="button" onclick='tong(+document.getElementById("sodau").value, +document.getElementById("sothuhai").value)'>Check</button>
+<div id="result"></div>
+<script>
+    function tong(a,b){
+        if(a<=b){
+            let sum = a+b;
+            document.getElementById("result").innerHTML="Tổng của 2 số " +a+" và "+b+" là: "+sum;
+        } else {
+            document.getElementById("result").innerHTML="Vì " +a+" lớn hơn "+b+" nên không cần tính tổng"
+        }
+    }
+</script>
+</body>
+</html>

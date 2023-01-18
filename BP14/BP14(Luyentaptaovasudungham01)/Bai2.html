@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm 1 đvi vào số vừa nhập</title>
+</head>
+<body>
+<label><input type="number" id= "nhap"></label>
+<button type="button" onclick= 'count(+document.getElementById("nhap").value)'>Count</button>
+<div id="result"></div>
+<script>
+    function count(x){
+        let sum;
+        sum = x+1;
+        document.getElementById("result").innerHTML= sum;
+    }
+</script>
+</body>
+</html>
