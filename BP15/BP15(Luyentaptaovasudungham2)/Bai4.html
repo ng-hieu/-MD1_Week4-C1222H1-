@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra ký tự vừa nhập</title>
+</head>
+<body>
+<label><input type="text" id="input"></label>
+<button onclick="check()">Check</button>
+<div id = "result"></div>
+<script>
+  function check(){
+    let x = document.getElementById("input").value;
+    if (x == x/1){
+      document.getElementById("result").innerHTML = "true";
+    } else {
+      document.getElementById("result").innerHTML = "false";
+    }
+  }
+</script>
+</body>
+</html>

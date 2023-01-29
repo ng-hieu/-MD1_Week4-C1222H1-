@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích và chu vi hình tròn</title>
+</head>
+<body>
+<label><input type="text" oninput="P_S(this.value)" placeholder="Nhập vào bán kính..."></label>
+<div id = "resultp"></div>
+<div id = "results"></div>
+<script>
+function P_S(x){
+  let pi = 3.14;
+  let P = 2*pi*x;
+  let S = pi*x*x;
+  document.getElementById("resultp").innerHTML = "Chu vi hình tròn là: " + P;
+  document.getElementById("results").innerHTML = "Diện tích hình tròn là: " + S;
+}
+</script>
+</body>
+</html>

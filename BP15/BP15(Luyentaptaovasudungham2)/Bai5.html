@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nhập vào nhỏ nhất</title>
+</head>
+<body>
+<!--<label><input type="text" id="nhapa" placeholder="Nhập số đầu tiên"></label><br>-->
+<!--<label><input type="text" id="nhapb" placeholder="Nhập số thứ hai"></label><br>-->
+<!--<label><input type="text" id="nhapc" placeholder="Nhập số thứ ba"></label><br>-->
+<script>
+  let a= prompt("Nhập số đầu tiên");
+  let b = prompt("Nhập số thứ hai");
+  let c = prompt("Nhập số thứ 3");
+  function check(x, y, z){
+    let min = x;
+    if (min > y){
+      min = y;
+    } else if (min > z){
+      min = z;
+    }
+    alert("Số bé nhất là: " + min);
+    return min;
+  }
+check(a,b,c)
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<img src="Screenshot%202023-01-19%20102727.jpg" alt="Vegeta" id="anh"
+     style="width: 150px; height: 150px; border-radius: 50%; position: relative; top: 0; left: 0; transition: 0.5s ">
+<button onclick="trai()">Sang trái</button>
+<button onclick="len()">Lên</button>
+<button onclick="xuong()">Xuống</button>
+<button onclick="phai()">Sang phải</button>
+<script>
+    function phai() {
+        let x = document.getElementById('anh');
+        x.style.left = parseInt(x.style.left) + 100 + 'px';
+    }
+    function trai(){
+        let y = document.getElementById('anh');
+        y.style.left = parseInt(y.style.left) - 100 + 'px';
+    }    function len(){
+        let z = document.getElementById('anh');
+        z.style.top = parseInt(z.style.top) - 100 + 'px';
+    }    function xuong(){
+        let s = document.getElementById('anh');
+        s.style.top = parseInt(s.style.top) + 100 + 'px';
+    }
+</script>
+</body>
+</html>

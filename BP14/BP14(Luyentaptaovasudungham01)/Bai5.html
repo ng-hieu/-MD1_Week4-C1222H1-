@@ -5,7 +5,7 @@
     <title>Check chòm sao</title>
 </head>
 <body>
-<label><input type="text" id = "nhap"></label>
+<label><input type="text" id="nhap"></label>
 <button onclick="checkchom()">Check</button>
 <div id="result"></div>
 <script>
@@ -13,18 +13,23 @@
         let nhapsao = document.getElementById("nhap").value;
         let tensao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
         let chomsao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
-        let dem = 0;
-        for (let i = 0; i < tensao.length; i++) {
-            if (tensao[i] === nhapsao) {
-                dem = i;
+        let dem;
+        let rong = "";
+        if (nhapsao === rong) {
+            document.getElementById("result").innerHTML = "Cần nhập tên ngôi sao vào để kiểm tra chòm sao";
+        } else {
+            for (let i = 0; i < tensao.length; i++) {
+                if (tensao[i] === nhapsao) {
+                    dem = i;
+                }
+            }
+            for (let j = 0; j < chomsao.length; j++) {
+                if (j === dem) {
+                    document.getElementById("result").innerHTML = chomsao[j];
+                }
             }
         }
-        for (let j = 0; j < chomsao.length; j++) {
-            if (j === dem) {
-                document.getElementById("result").innerHTML = chomsao[j];
-            }
-        }
-    }
+   }
 </script>
 </body>
 </html>

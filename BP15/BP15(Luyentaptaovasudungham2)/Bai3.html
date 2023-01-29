@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa</title>
+</head>
+<body>
+<label><input type="text" oninput="giaiThua(this.value)"></label>
+<div id = "result"></div>
+<script>
+  function giaiThua(x){
+    let result = 1;
+    for (let i = 1; i<=x; i++){
+      result = result * i;
+    }
+    document.getElementById("result").innerHTML = "Giai thừa của số vừa nhập là: "+result;
+    return result;
+  }
+</script>
+</body>
+</html>

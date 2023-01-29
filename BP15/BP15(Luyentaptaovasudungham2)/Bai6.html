@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nhập vào là nguyên dương hay nguyên âm</title>
+</head>
+<body>
+<script>
+    function checkInt(x){
+        let y = x - Math.trunc(x);
+        if (y===0){
+            if(x>0){
+                alert("Số nhập vào là số nguyên dương");
+            } else if(x<0){
+                alert("Số nhập vào là số nguyên âm");
+            } else { alert("Số nhập vào là số 0");}
+        } else { alert("Số nhập vào không phải số nguyên")}
+    }
+    let Inter = prompt("Nhập 1 số bất kỳ")
+    checkInt(Inter);
+</script>
+</body>
+</html>
