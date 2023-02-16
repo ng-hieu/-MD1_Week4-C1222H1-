@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
 </head>
 <body>
-$END$
+<script>
+    class Temperature{
+        constructor(C) {
+            this.C = C;
+            this.F = function (){
+                return 9/5 * C + 32;
+            }
+            this.Kevin = function (){
+                return C + 273.15;
+            }
+        }
+    }
+    let temperature = new Temperature(0);
+    let c = temperature.C;
+    let f = temperature.F();
+    let kevin = temperature.Kevin();
+    document.write("Chuyển từ: "+c+" độ C"+" sang độ F là: "+f+" độ F"+" và sang độ K là: "+ kevin+ " độ K");
+</script>
 </body>
 </html>

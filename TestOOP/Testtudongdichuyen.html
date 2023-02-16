@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Test</title>
 </head>
 <body>
-$END$
+<!--<img src="fuckyou.jpg.png" alt="Vegeta" id="anh"-->
+<!--     style="width: 150px; height: 150px;-->
+<!--     border-radius: 50%; position: relative;-->
+<!--     top: 0; left: 0; ">-->
+<!--<div id="anh" style="position: relative; top: 0; left: 0; color: red; font-size: 100px">Yêu Mai</div>-->
+<img src="fuckyou.jpg.png" alt="Mai" id="anh" style="position: relative; top: 0; left: 0;">
+<script>
+  let x = document.getElementById('anh');
+ setInterval(()=>{
+   x.style.left = parseInt(x.style.left) + 100 + 'px';
+   console.log(window.innerWidth)
+   if(parseInt(x.style.left) >= window.innerWidth){
+     x.style.left= '-150px';
+   }
+ },10)
+</script>
 </body>
 </html>

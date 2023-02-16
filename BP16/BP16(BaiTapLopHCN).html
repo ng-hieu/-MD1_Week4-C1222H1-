@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Lớp Hình chữ nhật</title>
 </head>
 <body>
-$END$
+<canvas id="myCanvas" width="320px" height="108px" style="border:1px solid #d3d3d3"></canvas>
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+            this.Area = function () {
+                return width * height;
+            }
+            this.Perimeter = function () {
+                return (width + height) * 2;
+            }
+        }
+    }
+
+    let hcn = new Rectangle(150, 50);
+    let width = hcn.width;
+    let height = hcn.height;
+    let area = hcn.Area();
+    console.log(area);
+    let perimeter = hcn.Perimeter();
+    console.log(hcn.Perimeter());
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d")
+    //ctx.moveTo(0,0);
+    // ctx.lineTo(0,100);
+    // ctx.lineTo(100,100);
+    // ctx.lineTo(100,0);
+    // ctx.lineTo(0,0);
+    // ctx.stroke();
+    ctx.fillStyle='#7fec00';
+    ctx.fillRect(10, 10, width, height)
+    alert("Chiều dài hình chữ nhật là: "+width +"   Chiều rộng hình chữ nhật là: "+height);
+    alert("Chu vi hình chữ nhật là: "+perimeter +"   Diện tích hình chữ nhật là: "+area);
+</script>
 </body>
 </html>

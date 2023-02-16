@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Bài 2.2</title>
 </head>
 <body>
-$END$
+<p>Bài 2.2: Làm bức ảnh tự di chuyển thành HCN quanh các cạnh màn hình </p>
+<img src="fuckyou.jpg.png" alt="anh" id="anh" style="position: relative; top: 0px; left: 50px; width: 150px; height: 150px">
+<script>
+    let x = document.getElementById('anh');
+    let dk = 5;
+    setInterval(() => {
+        x.style.left = parseInt(x.style.left) +'px';
+        if (parseInt(x.style.left) >= window.innerWidth - 150) {
+            x.style.top = parseInt(x.style.top) + dk + 'px';
+        }
+        if (parseInt(x.style.top) >= window.innerHeight - 190) {
+            x.style.left = parseInt(x.style.left) - dk + 'px';
+        }
+        if (parseInt(x.style.left) === 0 ) {
+            x.style.top = parseInt(x.style.top) - dk + 'px';
+        }
+        if (parseInt(x.style.top) === 0 ) {
+            x.style.left = parseInt(x.style.left) + dk + 'px';
+        }
+    },10)
+
+</script>
 </body>
 </html>

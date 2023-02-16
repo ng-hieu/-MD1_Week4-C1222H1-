@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp Date</title>
 </head>
 <body>
-$END$
+<script>
+    class MyDate {
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+            this.getDay = function () {
+                return this.day;
+            }
+            this.getMonth = function (){
+                return this.month;
+            }
+            this.getYear = function (){
+                return this.year;
+            }
+            this.setDay = function (day){
+                this.day = day;
+            }
+            this.setMonth = function (month){
+                this.month = month;
+            }
+            this.setYear = function (year){
+                this.year = year;
+            }
+        }
+    }
+    let Date = new MyDate(2, 2, 2022);
+    Date.setDay(10);
+    Date.setMonth(10);
+    Date.setYear(2012);
+    let day = Date.getDay();
+    let month = Date.getMonth();
+    let year = Date.getYear();
+    alert(day +"/"+ month +"/"+ year);
+    console.log(day +"/"+ month +"/"+ year)
+</script>
 </body>
 </html>

@@ -1,10 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Bài 2.4</title>
 </head>
 <body>
-$END$
+<p>Bài 2.4: Bức ảnh tự di chuyển, có thể dùng nút để thay đổi hướng</p>
+<img src="fuckyou.jpg.png" alt="anh" id="anh" style="position: relative; top: 0; left: 0; width: 150px; height: 150px">
+<script>
+    // let x = document.getElementById('anh');
+    // setInterval(() => {
+    //     x.style.left = parseInt(x.style.left) + 100 + 'px';
+    //     console.log(window.innerWidth)
+    //     if (parseInt(x.style.left) >= window.innerWidth) {
+    //         x.style.left = '-150px';
+    //     }
+    // }, 100)
+    // window.addEventListener('keydown', (e) => {
+    //     console.log(e.key);
+    let x = document.getElementById('anh');
+    let speedX=1;
+    let speedY=0;
+    setInterval(() => {
+        x.style.left = parseInt(x.style.left) + speedX + 'px';
+        x.style.top = parseInt(x.style.top) + speedY + 'px';
+        if (parseInt(x.style.left) >= window.innerWidth) {
+            x.style.left = '-150px';
+        } else if (parseInt(x.style.top) >= window.innerHeight){
+            x.style.top = '-150px';
+        } else if (parseInt(x.style.left) < speedX-200){
+            x.style.left = window.innerWidth + 'px';
+        } else if (parseInt(x.style.top) < speedY -200 ){
+            x.style.top = window.innerHeight + 'px';
+        }
+
+    },1)
+    window.addEventListener('keydown', (e) => {
+        console.log(e.key);
+        switch (e.key) {
+            case "ArrowDown":
+                speedX = 0;
+                speedY = 1;
+                break;
+            case "ArrowUp":
+                speedX = 0;
+                speedY = -1;
+                break;
+            case "ArrowRight":
+                speedX = 1;
+                speedY = 0;
+                break;
+            case "ArrowLeft":
+                speedX = -1;
+                speedY = 0;
+                break;
+        }
+
+    })
+</script>
 </body>
 </html>

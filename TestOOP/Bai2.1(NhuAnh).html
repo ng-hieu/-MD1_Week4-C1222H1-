@@ -2,10 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bài 2</title>
+    <title>Bài 2.1</title>
 </head>
 <body>
-<p>Bài 2.1: Bức ảnh di chuyển từ trái qua phải Khi bức ảnh di chuyển chạm cạnh phải màn hình, sẽ biến mất và xuất hiện tại cạnh trái và tiếp tục di chuyển từ trái qua phải. </p>
-
+<p>Bài 2.1: Bức ảnh di chuyển từ trái qua phải. Khi bức ảnh di chuyển chạm cạnh phải màn hình, sẽ biến mất và xuất hiện
+    tại cạnh trái và tiếp tục di chuyển từ trái qua phải. </p>
+<img src="fuckyou.jpg.png" alt="anh" id="anh" style="position: relative; top: 0; left: 0; width: 150px; height: 150px">
+<script>
+    let x = document.getElementById('anh');
+    setInterval(() => {
+        x.style.left = parseInt(x.style.left) + 100 + 'px';
+        console.log(window.innerWidth)
+        if (parseInt(x.style.left) >= window.innerWidth) {
+            x.style.left = '-150px';
+        }
+    }, 60)
+</script>
 </body>
 </html>

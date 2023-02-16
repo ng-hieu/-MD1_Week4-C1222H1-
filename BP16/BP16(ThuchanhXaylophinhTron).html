@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Xây lớp hình tròn</title>
 </head>
 <body>
-$END$
+<script>
+  class Circle {
+      constructor(radius) {
+          this.radius = radius;
+          this.getRadius = function (){
+              return radius;
+          }
+          this.getArea = function (){
+              return 3.14 * radius * radius;
+          }
+      }
+  }
+  let circle = new Circle(2);
+  let radius = circle.getRadius();
+  let Area = circle.getArea();
+  alert("Radius: " + radius +"; " + "Area: "+ Area)
+  console.log(radius);
+  console.log(Area);
+</script>
 </body>
 </html>

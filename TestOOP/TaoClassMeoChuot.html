@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>MeoVaChuot</title>
 </head>
 <body>
-$END$
+<script>
+    class Cat {
+        constructor(nameC, weightC) {
+            this.nameC = nameC;
+            this.weightC = weightC;
+        }
+
+        eat(foodWeight) {
+            this.weightC += foodWeight;
+        }
+
+        geti4() {
+            alert(this.nameC + " Có cân nặng là: " + this.weightC);
+        }
+    }
+
+    class Mouse {
+        constructor(nameM, weightM) {
+            this.nameM = nameM;
+            this.weightM = weightM;
+            this.dieM = false;
+        }
+
+        geti4() {
+            if (this.dieM) {
+                alert(this.nameM + " Đã chết");
+            } else {
+                alert(this.nameM + " Có cân nặng là: " + this.weightM);
+            }
+        }
+    }
+
+
+</script>
 </body>
 </html>

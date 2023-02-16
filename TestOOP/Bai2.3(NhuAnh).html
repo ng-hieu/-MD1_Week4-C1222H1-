@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Bài 2.3</title>
 </head>
 <body>
-$END$
+<p>Bài 2.3: Làm bức ảnh tự di chuyển chéo, đập các cạnh thì nảy lại (bouncing ball)</p>
+<img src="fuckyou.jpg.png" alt="anh" id="anh" style="position: relative; top: 0; left: 0; width: 150px; height: 150px">
+<script>
+    let x = document.getElementById('anh');
+    let speedX = 1;
+    let speedY = 1;
+    setInterval(() => {
+        x.style.left = parseInt(x.style.left) + speedX + 'px';
+        x.style.top = parseInt(x.style.top) + speedY + 'px';
+        if (x.style.top >= window.innerHeight) {
+            x.style.top =
+        }
+    }, 1)
+
+</script>
 </body>
 </html>
